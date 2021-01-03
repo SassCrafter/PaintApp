@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="style.css">
+	<script src="app.js" defer></script>
+	<title>Paint App</title>
+</head>
+<body>
+	<section class="paint">
+		<!--<div class="paint__tools--trigger">
+			<i class="fas fa-tools"></i>
+		</div>-->
+		<div class="paint__tools">
+			<ul>
+				<li class="paint__tool">
+					<label for="paint__color">color</label>
+					<input type="color" id="paint__color" class="paint__input" value="#b04192">
+				</li>
+				<li class="paint__tool">
+					<label for="paint__bg-color">bg color</label>
+					<input type="color" id="paint__bg-color" class="paint__input" value="#ffffff">
+				</li>
+				<li class="paint__tool">
+					<label for="paint__brush-size">size (<span id="paint__brush-size--num">5</span>)</label>
+					<input type="range" id="paint__brush-size" class="paint__input" value="5" min="5" max="50">
+				</li>
+				<li class="paint__tool">
+					<span class="paint__tool-btn paint__tool-btn--white" id="paint__erase">
+						<i class="fas fa-eraser"></i>
+					</span>
+					<span class="paint__tool-btn paint__tool-btn--red" id="paint__reset">
+						<i class="fas fa-redo"></i>
+					</span>
+				</li>
+				<li class="paint__tool">
+					<h3 class="paint__tool-title">Canvas Size</h3>
+					<div>
+						<label for="paint__canvas-width" class='inline-label'>x</label>
+						<input type="number" value="300" id="paint__canvas-width" class="paint__input paint__input--number">
+					</div>
+
+					<div>
+						<label for="paint__canvas-height" class='inline-label'>y</label>
+						<input type="number" value="300" id="paint__canvas-height" class="paint__input paint__input--number">
+					</div>
+				</li>
+				<li class="paint__tool">
+					<h3 class="paint__tool-title">storage</h3>
+					<button class="paint__btn" id="paint__save-btn">save</button>
+					<button class="paint__btn" id="paint__load-btn">load</button>
+					<button class="paint__btn" id="paint__clear-btn">clear</button>
+				</li>
+				<li class="paint__tool">
+					<h3 class="paint__tool-title">extra</h3>
+					<button class="paint__btn" id="paint__download-btn">download</button>
+				</li>
+			</ul>
+		</div>
+		<canvas id="paint__canvas" class="paint__canvas" width="300" height="300" style="border:1px solid black"></canvas>
+	</section>
+</body>
+</html>
